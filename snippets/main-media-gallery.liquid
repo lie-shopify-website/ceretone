@@ -1,0 +1,182 @@
+{% comment %} 判断是否有视频 {% endcomment %}
+{% liquid
+    assign has_video = false
+    assign first_video = ''
+    for media in product.media
+        if media.media_type == 'video'
+            unless media.host == 'youtube' or media.host == 'vimeo'
+                assign first_video = media
+                assign has_video = true
+                break
+            endunless
+        endif
+    endfor
+%}
+
+
+<div class="main-media-gallery">
+
+    <div class="big-image-swiper-list">
+        {% for variant in product.variants %}
+            {% if variant.metafields.custom.variant_media_list.value == blank %} {% continue %} {% endif %} {% comment %} 没有图片就不显示 {% endcomment %}
+
+            <div class="swiper-box" data-index="variant-id-{{ variant.id }}" data-position="{{ forloop.index }}" {% unless forloop.first %}style="display:none;"{% endunless %}>
+                <div class="swiper big-image-swiper">
+                    <div class="swiper-wrapper">
+                        {% if variant.metafields.custom.variant_media_list.value != blank %}
+                            {%  assign medias = variant.metafields.custom.variant_media_list.value %}
+                            {%- for media in medias -%}
+                                {% render 'media-item', media:media, class:'swiper-slide' %}
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="product__slider-nav no-js-hidden">
+                    <div class="swiper-button-prev focus-inset">
+                    {% render 'icon-caret-left' %}
+                    </div>
+                    <div class="swiper-button-next focus-inset">
+                    {% render 'icon-caret-right' %}
+                    </div>
+                </div>
+            </div>
+
+        {% endfor %}
+
+        <div class="video-swiper-box" style="display: none;">
+            <div class="swiper video-swiper">
+                <div class="swiper-wrapper">
+                    {% for media in product.media %}
+                        {% if media.media_type == 'video' %}
+                            {% unless media.host == 'youtube' or media.host == 'vimeo' %}
+                                {% render 'media-item', media:media, class:'swiper-slide' %}
+                            {% endunless %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="product__slider-nav no-js-hidden">
+                <div class="swiper-button-prev focus-inset">
+                {% render 'icon-caret-left' %}
+                </div>
+                <div class="swiper-button-next focus-inset">
+                {% render 'icon-caret-right' %}
+                </div>
+            </div>
+
+            <script>
+                ;(function() {
+                    window.addEventListener('DOMContentLoaded', function() {
+                        /* media swiper */
+                        new Swiper('.video-swiper-box .video-swiper', {
+                            spaceBetween: 10,
+                            threshold : 50,
+                            slidesPerView: 'auto',
+                            navigation: {
+                                nextEl: '.video-swiper-box .swiper-button-next',
+                                prevEl: '.video-swiper-box .swiper-button-prev',
+                            },
+                            on: {
+                                transitionEnd: function(swiper){
+                                    _pauseAllMedia(); /* 切换图片,要暂停视频 */
+
+                                    const videoBtn = this.$el.find('.swiper-slide-active .media-poster');
+                                    if(videoBtn[0]){
+                                        videoBtn[0].click(); /* 播放当前视频 */
+                                    }
+                                }
+                            }
+                        });
+                    });
+                })();
+            </script> 
+        </div>
+    </div>
+
+    <div class="thumbs-image-swiper-list">
+        {% for variant in product.variants %}
+            {% if variant.metafields.custom.variant_media_list.value == blank %} {% continue %} {% endif %} {% comment %} 没有图片就不显示 {% endcomment %}
+
+            <div class="swiper-box" data-index="variant-id-{{ variant.id }}" data-position="{{ forloop.index }}" {% unless forloop.first %}style="display:none;"{% endunless %}>
+                <div class="thumbs-slider-container" {% if has_video %}has-video{% endif %}>
+                    <div class="swiper thumbs-slider">
+                            <div class="swiper-wrapper">
+                                {% if variant.metafields.custom.variant_media_list.value != blank %}
+                                    {%  assign medias = variant.metafields.custom.variant_media_list.value %}
+                                    {%- for media in medias -%}
+                                        <div class="swiper-slide">
+                                        {% if media.media_type == 'image' %}
+                                                <div class="image"><img src="{{ media.src |  image_url: width: 200 }}" width="{{ media.width }}" height="{{ media.height }}" alt="{{ media.alt }}"></div>
+                                        {% else %}
+                                                <div class="media-poster_btn">
+                                                <div class="ripple-box">
+                                                    <div class="ripple-content"><svg width="10" height="14" viewBox="0 0 10 14" fill="currentColor" aria-hidden="true" focusable="false" role="presentation" class="icon"><path d="M1.482.815A1 1 0 0 0 0 1.69v10.517a1 1 0 0 0 1.525.851L10.54 7.5a1 1 0 0 0-.043-1.728L1.481.815Z"/></svg></div>
+                                                </div>
+                                                </div>
+                                                <div class="image"><img src="{{ media.preview_image |  image_url: width: 200 }}" width="{{ media.preview_image.width }}" height="{{ media.preview_image.height }}" alt="{{ media.preview_image.alt }}"></div>
+                                        {% endif %}
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                                
+                            </div>
+                    </div>
+
+                    {% if has_video %}
+                        <div class="thumbs-medai-video">
+                            <div class="media-poster_btn">
+                                <div class="ripple-box">
+                                    <div class="ripple1"></div>
+                                    <div class="ripple2"></div>
+                                    <div class="ripple-content"><svg width="10" height="14" viewBox="0 0 10 14" fill="currentColor" aria-hidden="true" focusable="false" role="presentation" class="icon"><path d="M1.482.815A1 1 0 0 0 0 1.69v10.517a1 1 0 0 0 1.525.851L10.54 7.5a1 1 0 0 0-.043-1.728L1.481.815Z"/></svg></div>
+                                </div>
+                            </div>
+                            <div class="image"><img src="{{ first_video.preview_image |  image_url: width: 200 }}" width="{{ first_video.preview_image.width }}" height="{{ first_video.preview_image.height }}" alt="{{ first_video.preview_image.alt }}"></div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <script>
+                ;(function() {
+                    window.addEventListener('DOMContentLoaded', function() {
+                        /* media swiper */
+                        window.mainThumbsSlider{{ forloop.index }} = new Swiper('.main-media-gallery [data-index="variant-id-{{ variant.id }}"] .thumbs-slider', {
+                            spaceBetween: 20,
+                            slidesPerView: {% if has_video %} 3 {% else %} 4 {% endif %},
+                        });
+
+                        window.mainBigPcImageSwiper{{ forloop.index }} = new Swiper('.main-media-gallery [data-index="variant-id-{{ variant.id }}"] .big-image-swiper', {
+                            spaceBetween: 10,
+                            threshold : 50,
+                            slidesPerView: 'auto',
+                            navigation: {
+                                nextEl: '.main-media-gallery [data-index="variant-id-{{ variant.id }}"] .swiper-button-next',
+                                prevEl: '.main-media-gallery [data-index="variant-id-{{ variant.id }}"] .swiper-button-prev',
+                            },
+                            
+                            thumbs: {
+                                swiper: window.mainThumbsSlider{{ forloop.index }},
+                            },
+                            on: {
+                                transitionEnd: function(swiper){
+                                    _pauseAllMedia(); /* 切换图片,要暂停视频 */
+                                },
+                                slideChangeTransitionStart: function () {
+                                    if(window.mainBigPcImageSwiper{{ forloop.index }} && window.mainThumbsSlider{{ forloop.index }}){
+                                        window.mainThumbsSlider{{ forloop.index }}.slideTo(
+                                            window.mainBigPcImageSwiper{{ forloop.index }}.activeIndex,
+                                        )
+                                    }
+                                },
+                            }
+                        });
+
+                    });
+                })();
+            </script> 
+
+        {% endfor %}
+    </div>
+
+</div>

@@ -1,0 +1,275 @@
+{% schema %}
+{
+  "name": "Package List",
+  "class": "package-list",
+  "settings": [
+        { "type": "color", "id": "bg_color", "label": "Background", "default": "#ffffff" },
+    
+        { "type": "header","content":"Heading Title"},
+        { "type": "textarea","id": "title", "label": "Heading Title" },
+        { "type": "textarea","id": "sub_title", "label": "Sub Title" },
+    
+        { "type": "header","content":"PC"},
+        { "type": "range", "id": "pc_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+        { "type": "range", "id": "pc_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+        { "type": "header","content":"Mobile"},
+        { "type": "range", "id": "mb_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+        { "type": "range", "id": "mb_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "图片" },
+        { "type": "textarea","id": "text1", "label": "Text1" },
+        { "type": "textarea","id": "text2", "label": "Text2" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Custom",
+      "name": "Package List",
+    }
+  ]
+}
+{% endschema %}
+
+<section data-section-id="{{ section.id }}" style="display:block;">
+  <div class="container">
+     {%- if section.settings.title != blank or section.settings.sub_title != blank -%}
+        <div class="title-box">
+            {% if section.settings.title != blank %}
+                <div class="heading-title"><h2>{{ section.settings.title }}</h2></div>
+            {% endif %}
+            {% if section.settings.sub_title != blank %}
+                <div class="sub-title">{{ section.settings.sub_title }}</div>
+            {% endif %}
+        </div>
+      {% endif %}
+
+      <div class="package-list-container">
+        <div class="package-bigimage">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    {% for block in section.blocks %}
+                          <div class="swiper-slide">
+                              <div class="item-layout">
+                                    <div class="image"><img src="{{ block.settings.image | image_url: width:400 }}" width="400" height="auto"></div>
+                                    {% if block.settings.text1 != blank %}<div class="text1">{{ block.settings.text1 }}</div>{% endif %}
+                                    {% if block.settings.text2 != blank %}<div class="text2">{{ block.settings.text2 }}</div>{% endif %}
+                              </div>
+                          </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="swiper-scrollbar"></div>
+            <div class="swiper-btn-box">
+                <div class="swiper-button-prev">
+                  <svg class="icon icon-caret-left" style="transform: rotate(180deg);" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 319 511.61"><path d="M48.92 505.72 5.88 462.68c-7.85-7.85-7.83-20.72 0-28.54l178.35-178.35L5.88 77.44c-7.85-7.85-7.8-20.73 0-28.54L48.92 5.87c7.83-7.82 20.71-7.82 28.54 0l192.25 192.26.37.36 43.04 43.03c7.82 7.84 7.86 20.69 0 28.54l-43.04 43.04-.37.36L77.46 505.72c-7.85 7.86-20.68 7.86-28.54 0z"/></svg>
+                </div>
+                <div class="swiper-button-next">
+                  <svg class="icon icon-caret-right" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 319 511.61"><path d="M48.92 505.72 5.88 462.68c-7.85-7.85-7.83-20.72 0-28.54l178.35-178.35L5.88 77.44c-7.85-7.85-7.8-20.73 0-28.54L48.92 5.87c7.83-7.82 20.71-7.82 28.54 0l192.25 192.26.37.36 43.04 43.03c7.82 7.84 7.86 20.69 0 28.54l-43.04 43.04-.37.36L77.46 505.72c-7.85 7.86-20.68 7.86-28.54 0z"/></svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="package-thumbsimage">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    {% for block in section.blocks %}
+                          <div class="swiper-slide">
+                              <div class="item-layout">
+                                    <div class="image"><img src="{{ block.settings.image | image_url: width:100 }}" width="100" height="auto"></div>
+                              </div>
+                          </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+      </div>
+    
+  </div>
+</section>
+
+
+<script>
+;(function() {
+window.addEventListener('DOMContentLoaded', function() {
+
+    const currentUrl = window.location.href;
+    if(currentUrl.indexOf('aaa') != -1){
+      $('[data-section-id="{{ section.id }}"]').css('display','block');
+    }
+
+    let thumbsSlider = new Swiper('[data-section-id="{{section.id}}"] .package-thumbsimage .swiper', {
+        spaceBetween: 10,
+        slidesPerView: 5,
+        shortSwipes: false,
+    });
+
+    let bigPcImageSwiper = new Swiper('[data-section-id="{{section.id}}"] .package-bigimage .swiper', {
+        spaceBetween: 24,
+        pagination: {
+            el: '[data-section-id="{{section.id}}"] .swiper-pagination',
+        },
+        navigation: {
+            nextEl: '[data-section-id="{{section.id}}"] .swiper-button-next',
+            prevEl: '[data-section-id="{{section.id}}"] .swiper-button-prev',
+        },
+
+        scrollbar: {
+          el: '[data-section-id="{{section.id}}"] .swiper-scrollbar',
+        },
+
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                pagination: false,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1080: {
+                slidesPerView: 4,
+            },
+            1440: {
+                slidesPerView: 4,
+            },
+        },
+
+        thumbs: {
+            swiper: thumbsSlider,
+        }
+    });
+
+    
+});
+})();
+</script>
+
+<style>
+[data-section-id="{{ section.id }}"] {
+    background-color:{{ section.settings.bg_color }};
+}
+[data-section-id="{{ section.id }}"] .container {
+    padding-top:{{ section.settings.pc_padding_top }}px;
+	padding-bottom:{{ section.settings.pc_padding_bottom }}px;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: calc(1400px - 2 * 6.4rem);
+}
+@media screen and (max-width: 767px) {
+    [data-section-id="{{ section.id }}"] .container {
+        padding-top:{{ section.settings.mb_padding_top }}px;
+		padding-bottom:{{ section.settings.mb_padding_bottom }}px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+[data-section-id="{{ section.id }}"] img {
+    display:block;
+    max-width:100%;
+    height:auto;
+}
+
+.package-list .swiper-slide {
+    height:auto;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.package-list .package-bigimage .item-layout img {
+    border-radius: 10px;
+}
+.package-list .package-bigimage .image {
+    margin-bottom: 10px;
+}
+.package-list .package-bigimage .text1 {
+    font-size: 18px;
+    padding: 0 20px;
+}
+.package-list .package-bigimage .text2 {
+    font-size: 20px;
+    padding: 0 20px 20px;
+}
+
+.package-list .swiper-button-prev,
+.package-list .swiper-button-next {
+    position: absolute;
+    top: calc(50% - 24px);
+    background-color: #0116244d;
+}
+
+.package-list .swiper-button-prev svg,
+.package-list .swiper-button-next svg {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+.package-list .swiper-button-prev svg path,
+.package-list .swiper-button-next svg path {
+    fill:#fff;
+}
+.package-list .swiper-scrollbar {
+    margin-top: 24px;
+}
+.package-list .swiper-scrollbar-drag {
+    height: 3px;
+}
+.package-list .heading-title {
+    margin-bottom: 56px;
+}
+.package-list .heading-title h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.package-list .swiper-pagination-bullets.swiper-pagination-horizontal {
+  width:auto;
+  margin-left:20px;
+  margin-right:20px;
+}
+
+.swiper:not(.swiper-initialized) .swiper-slide {
+    flex-shrink: 1;
+}
+.package-bigimage {
+    position: relative;
+}
+.package-thumbsimage {
+    display: none;
+}
+@media screen and (max-width: 767px) {
+    .package-thumbsimage {
+        display: block;
+        margin-top:24px;
+    }
+
+    .package-list .package-thumbsimage .item-layout img {
+        border-radius: 5px;
+    }
+
+    .package-list .heading-title {
+        margin-bottom: 24px;
+    }
+    .package-list .heading-title h2 {
+        font-size: 22px;
+    }
+
+    .package-list .package-bigimage .text1 {
+        font-size: 14px;
+    }
+    .package-list .package-bigimage .text2 {
+        font-size: 16px;
+    }
+    .package-list .swiper-scrollbar {
+        display: none;
+    }
+}
+</style>
+
+

@@ -1,0 +1,55 @@
+<div class="popup-media-gallery">
+    <div class="modal-close-button">
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M14.0625 3.9375L3.9375 14.0625" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M14.0625 14.0625L3.9375 3.9375" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+    </div>
+
+    {% for variant in product.variants %}
+        {% if variant.metafields.custom.variant_media_list.value == blank %} {% continue %} {% endif %} {% comment %} 没有图片就不显示 {% endcomment %}
+
+        <div class="swiper-box" data-index="variant-id-{{ variant.id }}" data-position="{{ forloop.index }}" {% unless forloop.first %}style="display:none;"{% endunless %}>
+            <div class="swiper big-image-swiper">
+                <div class="swiper-wrapper">
+                    {% if variant.metafields.custom.variant_media_list.value != blank %}
+                        {%  assign medias = variant.metafields.custom.variant_media_list.value %}
+                        {%- for media in medias -%}
+                            {% render 'media-item', media:media, class:'swiper-slide' %}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+            <div class="product__slider-nav no-js-hidden">
+                <div class="swiper-button-prev focus-inset">
+                {% render 'icon-caret-left' %}
+                </div>
+                <div class="swiper-button-next focus-inset">
+                {% render 'icon-caret-right' %}
+                </div>
+            </div>
+
+            <script>
+                ;(function() {
+                    window.addEventListener('DOMContentLoaded', function() {
+                        /* media swiper */
+                        window.popupBigPcImageSwiper{{ forloop.index }} = new Swiper('.popup-media-gallery [data-index="variant-id-{{ variant.id }}"] .big-image-swiper', {
+                            spaceBetween: 10,
+                            threshold : 50,
+                            slidesPerView: 'auto',
+                            navigation: {
+                                nextEl: '.popup-media-gallery [data-index="variant-id-{{ variant.id }}"] .swiper-button-next',
+                                prevEl: '.popup-media-gallery [data-index="variant-id-{{ variant.id }}"] .swiper-button-prev',
+                            },
+                            on: {
+                                transitionEnd: function(swiper){
+                                    _pauseAllMedia(); /* 切换图片,要暂停视频 */
+                                }
+                            }
+                        });
+                    });
+                })();
+            </script> 
+        </div>
+    {% endfor %}
+</div>

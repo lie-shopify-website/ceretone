@@ -1,0 +1,243 @@
+{{ 'section-collapsible-content.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'collapsible-content.js' | asset_url }}" defer="defer"></script>
+
+<div class="collapsible-content" data-section-id="{{ section.id }}">
+  <div class="container">
+
+    {% if section.settings.title != blank %}<div class="collapsible-content__title h3">{{ section.settings.title | newline_to_br }}</div>{% endif %}
+            
+    <div class="collapsible-content__layout {% if section.settings.big_image != blank %}has-image{% endif %}">
+      <div class="collapsible-content__items">
+        {%- for block in section.blocks -%}
+          <div class="collapsible-content__item {% if block.settings.opened %} active {% endif %}" >
+            <button class="collapsible-content__toggle button--unstyled focus-inset">
+              <div class="collapsible-content__toggle-group">
+                {%- if block.settings.question != blank -%}
+                  <h3 class="collapsible-content__question h6">{{ block.settings.question | escape }}</h3>
+                {%- endif -%}
+              </div>
+              <div class="collapsible-content__icon">
+                <svg class="icon icon-caret-bottom" style="transform: rotate(90deg);" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 319 511.61"><path d="M48.92 505.72 5.88 462.68c-7.85-7.85-7.83-20.72 0-28.54l178.35-178.35L5.88 77.44c-7.85-7.85-7.8-20.73 0-28.54L48.92 5.87c7.83-7.82 20.71-7.82 28.54 0l192.25 192.26.37.36 43.04 43.03c7.82 7.84 7.86 20.69 0 28.54l-43.04 43.04-.37.36L77.46 505.72c-7.85 7.86-20.68 7.86-28.54 0z"/></svg>
+              </div>
+            </button>
+
+            {%- if block.settings.answer != blank -%}
+              <div
+                class="collapsible-content__answer"
+                {% if block.settings.opened %}
+                  style="display: block;"
+                {% endif %}
+              >
+                <div class="collapsible-content__answer-inner">
+                    {% if block.settings.image != blank %}
+                        <div class="image">
+                          <img src="{{ block.settings.image | image_url: width: 1500 }}" width="1500" height="auto" />
+                        </div>
+                    {% endif %}
+                    <div class="body-large">{{ block.settings.answer }}</div>
+                </div>
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+      
+      {% if section.settings.big_image != blank %}
+          <div class="big-image">
+            <img src="{{ section.settings.big_image | image_url: width: 1500 }}" width="1500" height="auto" />
+          </div>
+      {% endif %}
+      
+    </div>
+  </div>
+</div>
+
+
+<style>
+  [data-section-id="{{ section.id }}"] .container {
+      padding-top:{{ section.settings.pc_padding_top }}px;
+  	padding-bottom:{{ section.settings.pc_padding_bottom }}px;
+  }
+  @media screen and (max-width: 767px) {
+      [data-section-id="{{ section.id }}"] .container {
+          padding-top:{{ section.settings.mb_padding_top }}px;
+  		padding-bottom:{{ section.settings.mb_padding_bottom }}px;
+      }
+  }
+  
+  [data-section-id="{{ section.id }}"] img {
+    max-width:100%;
+    height:auto;
+    border-radius: 15px;
+  }
+  .collapsible-image .collapsible-content__layout.has-image {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+  }
+  .collapsible-image .collapsible-content__layout.has-image .collapsible-content__items {
+      flex:0 0 calc(55% - 15px);
+      max-width:calc(55% - 15px);
+  }
+  .collapsible-image .collapsible-content__layout.has-image .big-image {
+      flex:0 0 calc(45% - 15px);
+      max-width:calc(45% - 15px);
+  }
+  .collapsible-image .collapsible-content__answer-inner {
+      max-width: 100%;
+      word-break: break-word;
+  }
+  .collapsible-image .collapsible-content__item {
+      padding: 0 0 2rem 0;
+      margin-bottom: 2rem;
+      position: relative;
+  }
+  .collapsible-image .collapsible-content__item:last-child {
+      padding:0;
+  }
+  .collapsible-image .collapsible-content__toggle {
+      padding: 0;
+  }
+
+  .collapsible-image .collapsible-content__item:after {
+      content: '';
+      height: 2px;
+      width: 100%;
+      background: linear-gradient(to right,transparent, #dddcdc 20%, #dddcdc 80%, transparent);
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+  }
+  .collapsible-image .collapsible-content__item:last-child:after {
+    display:none;
+  }
+  .collapsible-image .collapsible-content__answer {
+      padding: 6px 0;
+  }
+  .collapsible-content__title.h3 {
+      text-align: center;
+      margin-bottom: 56px;
+  }
+  .collapsible-image .collapsible-content__item.active .collapsible-content__icon svg {
+    transform: rotate(-90deg) !important;
+  }
+  .collapsible-image .collapsible-content__icon svg {
+      width: 1rem;
+      height: 1rem;
+  }
+  .collapsible-content__title.h3 span {
+      display: inline-flex;
+      background: #ffbea2;
+      padding: 0 7px;
+  }
+  .collapsible-image .collapsible-content__answer-inner>* {
+    color:#555;
+  }
+  @media screen and (max-width: 767px) {
+    .collapsible-image .collapsible-content__layout.has-image {
+      flex-direction: column-reverse;
+    }
+    .collapsible-image .collapsible-content__layout.has-image .collapsible-content__items {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .collapsible-image .collapsible-content__layout.has-image .big-image {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .collapsible-content__title.h3 {
+        margin-bottom: 30px;
+    }
+    .collapsible-image .collapsible-content__item {
+        padding: 0 0 1rem 0;
+        margin-bottom: 1rem;
+    }
+  }
+
+  
+</style>
+
+
+{% schema %}
+{
+  "name": "Collapsible Image",
+  "tag": "section",
+  "class": "collapsible-content-section collapsible-image",
+  "enabled_on": {
+    "templates": ["*"]
+  },
+
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "big_image",
+      "label": "图片"
+    },
+    { "type": "header","content":"PC"},
+    { "type": "range", "id": "pc_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+    { "type": "range", "id": "pc_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+    { "type": "header","content":"Mobile"},
+    { "type": "range", "id": "mb_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+    { "type": "range", "id": "mb_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 }
+  ],
+  
+  "blocks": [
+    {
+      "type": "accordion",
+      "name": "t:sections.collapsible-content.blocks.accordion.name",
+      "limit": 20,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "图片"
+        },
+        {
+          "type": "text",
+          "id": "question",
+          "default": "Some title",
+          "label": "t:sections.all.heading.label"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "default": "<p>Some description</p>",
+          "label": "t:sections.all.text.label"
+        }, 
+        {
+          "type": "checkbox",
+          "id": "opened",
+          "label": "t:sections.collapsible-content.blocks.accordion.settings.opened.label",
+          "default": false
+        }
+      ]
+    }
+  ],
+  
+  "presets": [
+    {
+      "name": "Collapsible Image",
+      "blocks": [
+        {
+          "type": "accordion",
+          "settings": {
+            "opened": true
+          }
+        },
+        {
+          "type": "accordion"
+        },
+        {
+          "type": "accordion"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

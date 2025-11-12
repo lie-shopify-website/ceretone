@@ -1,0 +1,117 @@
+<section data-section-id="{{ section.id }}">
+    <div class="container">
+        <div class="inner">
+            {% if section.settings.title != blank %}<div class="title h3">{{ section.settings.title | newline_to_br }}</div>{% endif %}
+
+            <div class="four-grid-images">
+              {%- for block in section.blocks -%}
+                <div class="image">
+                  <div class="img pc"><img src="{{ block.settings.image | image_url: width: block.settings.image.width }}" width="{{ block.settings.image.width }}" height="auto" /></div>
+                  <div class="img mb"><img src="{{ block.settings.image_mb | image_url: width: block.settings.image_mb.width }}" width="{{ block.settings.image_mb.width }}" height="auto" /></div>
+
+                  <div class="img-text h6">{{ block.settings.title }}</div>
+                </div>
+              {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+[data-section-id="{{ section.id }}"] {
+  background:{{ section.settings.background }};
+}
+[data-section-id="{{ section.id }}"] .container {
+    padding-top:{{ section.settings.pc_padding_top }}px;
+	padding-bottom:{{ section.settings.pc_padding_bottom }}px;
+}
+@media screen and (max-width: 767px) {
+    [data-section-id="{{ section.id }}"] .container {
+        padding-top:{{ section.settings.mb_padding_top }}px;
+		padding-bottom:{{ section.settings.mb_padding_bottom }}px;
+    }
+}
+[data-section-id="{{ section.id }}"] img {
+    max-width: 100%;
+    height: auto;
+    display: table;
+    border-radius: 10px;
+}  
+.four-grid .title {
+    text-align: center;
+    margin-bottom: 56px;
+}
+.four-grid .four-grid-images {
+    display: flex;
+    flex-wrap: wrap;
+    --four-gap: 50px;
+    gap: var(--four-gap);
+}
+.four-grid .four-grid-images .image {
+    flex: 0 0 calc(25% - calc(3 / 4 * var(--four-gap)));
+    max-width:calc(25% - calc(3 / 4 * var(--four-gap)));
+}
+.four-grid  .img-text {
+    text-align: center;
+    margin-top: 20px;
+}
+@media screen and (max-width: 767px) {
+  .four-grid .title {
+      margin-bottom: 24px;
+  }
+  .four-grid .four-grid-images {
+      --four-gap: 24px;
+  }
+  .four-grid .four-grid-images .image {
+      flex: 0 0 calc(50% - calc(1 / 2 * var(--four-gap)));
+      max-width:calc(50% - calc(1 / 2 * var(--four-gap)));
+  }
+  .four-grid .img-text {
+      margin-top: 6px;
+  }
+}
+
+</style>
+
+<script>
+    window.addEventListener("DOMContentLoaded", function () {
+
+    });                       
+</script>
+
+
+{% schema %}
+    {
+        "name": "Four Grid",
+        "class":"four-grid",
+        "settings": [
+          { "type": "color", "id": "background", "label": "Background", "default":"#ffffff" },
+          { "type": "textarea", "id":"title", "label":"Title"},
+          
+          { "type": "header","content":"PC"},
+          { "type": "range", "id": "pc_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+          { "type": "range", "id": "pc_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+          { "type": "header","content":"Mobile"},
+          { "type": "range", "id": "mb_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+          { "type": "range", "id": "mb_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 }
+        ],
+        "max_blocks": 4,
+        "blocks": [
+          {
+            "type": "image",
+            "name": "Image",
+            "settings": [
+              { "type": "image_picker", "id": "image", "label": "图片" },
+              { "type": "image_picker", "id": "image_mb", "label": "图片(MB)" },
+              { "type": "textarea", "id":"title", "label":"Title"},
+            ]
+          }
+        ],
+        "presets": [
+            {
+                "name": "Four Grid",
+                "category":"Custom"
+            }
+        ]
+    }
+{% endschema %}

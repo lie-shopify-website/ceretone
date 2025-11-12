@@ -1,0 +1,144 @@
+<section data-section-id="{{ section.id }}">
+    <div class="container">
+        <div class="inner">
+            {% if section.settings.title != blank %}<div class="title h3">{{ section.settings.title | newline_to_br }}</div>{% endif %}
+
+            <div class="pictrue-area">
+                <div class="image">
+                  <div class="img pc"><img src="{{ section.settings.image | image_url: width: section.settings.image.width }}" width="{{ section.settings.image.width }}" height="auto" /></div>
+                  <div class="img mb"><img src="{{ section.settings.image_mb | image_url: width: section.settings.image_mb.width }}" width="{{ section.settings.image_mb.width }}" height="auto" /></div>
+                </div>
+                <div class="po-content content-text1" style="--x:{{ section.settings.x1 }}%;--y:{{ section.settings.y1 }}%;--mb_x:{{ section.settings.mb_x1 }}%;--mb_y:{{ section.settings.mb_y1 }}%;">
+                  <div class="cont-heading h4">{{ section.settings.title1 }}</div>
+                  <div class="cont-info body-large">{{ section.settings.info1 }}</div>
+                </div>
+                <div class="po-content content-text2" style="--x:{{ section.settings.x2 }}%;--y:{{ section.settings.y2 }}%;--mb_x:{{ section.settings.mb_x2 }}%;--mb_y:{{ section.settings.mb_y2 }}%;">
+                  <div class="cont-heading h4">{{ section.settings.title2 }}</div>
+                  <div class="cont-info body-large">{{ section.settings.info2 }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+[data-section-id="{{ section.id }}"] .container {
+    padding-top:{{ section.settings.pc_padding_top }}px;
+	padding-bottom:{{ section.settings.pc_padding_bottom }}px;
+}
+@media screen and (max-width: 767px) {
+    [data-section-id="{{ section.id }}"] .container {
+        padding-top:{{ section.settings.mb_padding_top }}px;
+		padding-bottom:{{ section.settings.mb_padding_bottom }}px;
+    }
+}
+[data-section-id="{{ section.id }}"] img {
+    max-width: 100%;
+    height: auto;
+    display: table;
+}  
+[data-section-id="{{ section.id }}"] .po-content {
+    position:absolute;
+    max-width: 500px;
+}
+[data-section-id="{{ section.id }}"] .po-content.content-text1 {
+    top:var(--y);
+    left:var(--x);
+}
+[data-section-id="{{ section.id }}"] .po-content.content-text2 {
+    top:var(--y);
+    left:var(--x);
+}
+.pictrue-area {
+  position: relative;
+}
+.explosion-picture .title {
+    text-align: center;
+    margin-bottom: 56px;
+}
+.explosion-picture .cont-heading.h4 {
+    margin-bottom: 20px;
+}
+.explosion-picture .cont-info.body-large {
+    color: #666;
+}
+  
+@media screen and (max-width: 767px) {
+
+    [data-section-id="{{ section.id }}"] .po-content {
+        position:absolute;
+        max-width: 500px;
+        width: 100%;
+        padding: 0 6px;
+    }
+        
+  [data-section-id="{{ section.id }}"] .po-content.content-text1 {
+      top:var(--mb_y);
+      left:var(--mb_x);
+  }
+  [data-section-id="{{ section.id }}"] .po-content.content-text2 {
+      top:var(--mb_y);
+      left:var(--mb_x);
+      text-align:right;
+  }
+  .explosion-picture .title {
+      margin-bottom: 24px;
+  }
+  .explosion-picture .cont-heading.h4 {
+      margin-bottom: 10px;
+  }
+  .explosion-picture .cont-info.body-large {
+      line-height: 1.1;
+  }
+}
+
+</style>
+
+<script>
+    window.addEventListener("DOMContentLoaded", function () {
+
+    });                       
+</script>
+
+
+{% schema %}
+    {
+        "name": "Explosion Picture",
+        "class":"explosion-picture",
+        "settings": [
+                { "type": "textarea", "id":"title", "label":"Title"},
+                
+                { "type": "image_picker", "id": "image", "label": "Image", "info": "大图" },
+                { "type": "image_picker", "id": "image_mb", "label": "Image (MB)", "info": "手机大图" },
+
+                { "type": "header","content":"文字1"},
+                { "type": "text", "id":"title1", "label":"Heading"},
+                { "type": "textarea", "id":"info1", "label":"Info"},
+                { "type": "range", "id": "x1", "label": "横向", "min": 0, "max": 100, "step": 1, "unit": "%", "default": 0 },
+                { "type": "range", "id": "y1", "label": "纵向", "min": 0, "max": 100, "step": 1, "unit": "%", "default": 0 },
+                { "type": "range", "id": "mb_x1", "label": "横向(MB)", "min": 0, "max": 100, "step": 1, "unit": "%", "default": 0 },
+                { "type": "range", "id": "mb_y1", "label": "纵向(MB)", "min": 0, "max": 100, "step": 1, "unit": "%", "default": 0 },
+          
+                { "type": "header","content":"文字2"},
+                { "type": "text", "id":"title2", "label":"Heading"},
+                { "type": "textarea", "id":"info2", "label":"Info"},
+                { "type": "range", "id": "x2", "label": "横向", "min": 0, "max": 100, "step": 1, "unit": "%", "default": 0 },
+                { "type": "range", "id": "y2", "label": "纵向", "min": 0, "max": 100, "step": 1, "unit": "%", "default": 0 },
+                { "type": "range", "id": "mb_x2", "label": "横向(MB)", "min": 0, "max": 100, "step": 1, "unit": "%", "default": 0 },
+                { "type": "range", "id": "mb_y2", "label": "纵向(MB)", "min": 0, "max": 100, "step": 1, "unit": "%", "default": 0 },          
+                
+                { "type": "header","content":"PC"},
+                { "type": "range", "id": "pc_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+                { "type": "range", "id": "pc_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+                { "type": "header","content":"Mobile"},
+                { "type": "range", "id": "mb_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+                { "type": "range", "id": "mb_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 }
+        ],
+        "presets": [
+            {
+                "name": "Explosion Picture",
+                "category":"Custom"
+            }
+        ]
+    }
+{% endschema %}
