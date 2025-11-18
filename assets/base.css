@@ -1351,7 +1351,7 @@ table:not([class]) th {
   border: 0.1rem solid rgba(var(--color-foreground), 0.2);
 }
 
-a:empty,
+/* a:empty,
 ul:empty,
 dl:empty,
 section:empty,
@@ -1364,7 +1364,7 @@ h4:empty,
 h5:empty,
 h6:empty {
   display: none;
-}
+} */
 
 hr {
   display: block;

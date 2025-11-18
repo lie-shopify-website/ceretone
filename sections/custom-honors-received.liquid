@@ -1,0 +1,83 @@
+{% schema %}
+    {
+        "name": "Custom Honors Received",
+        "settings": [
+            { "type": "header", "content": "标题" },
+            { "type": "liquid", "id": "title", "label": "标题" },
+    
+            { "type": "header", "content": "配置" },
+            { "type": "text", "id": "custom_class", "label": "自定义class" },
+        ],
+        "blocks": [
+            {
+                "type": "slide",
+                "name": "Slide",
+                "settings": [
+                    { "type": "image_picker", "id": "image", "label": "图片" }
+                ]
+            }
+        ],
+    
+        "presets": [
+            {
+            "name": "Custom Honors Received",
+            "category": "custom"
+            }
+        ]
+    }
+    {% endschema %}
+    
+    
+    {{ 'custom-honors-received.css' | asset_url | stylesheet_tag }}
+    
+    <div class="custom-honors-received" data-section-id="{{ section.id }}">
+        <div class="review-inner safe-container">
+            {% if section.settings.title != blank %}
+                <div class="section-title"><h2>{{ section.settings.title }}</h2></div>
+            {% endif %}
+            <div class="honors-received-swiper">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        {% for block in section.blocks %}
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    {% if block.settings.image != blank %}
+                                        <div class="image">
+                                            <img src="{{ block.settings.image | image_url: width: 767 }}" width="auto" height="auto" />
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    ; (function () {
+        const oSection = document.querySelector('[data-section-id="{{ section.id }}"]');
+    
+        function initSwiper(){
+            const mainSwiperEle = oSection.querySelector('.swiper');
+            
+            if(mainSwiperEle) {
+                const mainSwiper = new Swiper(mainSwiperEle, {
+                    spaceBetween: 0,
+                    slidesPerView: 'auto',
+                    freeMode:true,
+                    scrollbar: {
+                        el: oSection.querySelector('.swiper-scrollbar'),
+                        dragSize:'120'
+                    },
+                });
+            }
+        }
+        
+        window.addEventListener('DOMContentLoaded', function() {
+            initSwiper();
+        });
+    
+    })();
+    </script>

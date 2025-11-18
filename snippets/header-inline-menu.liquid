@@ -6,11 +6,16 @@
         {% liquid
             assign link_title_downcase = link.title | downcase
             assign mega_menu = false
+            assign mega_menu_item_icon = false
 
             for block in section.blocks
             assign menu_item_downcase = block.settings.menu_item | strip | downcase
             if menu_item_downcase == link_title_downcase
                 assign mega_menu = true
+
+                if block.settings.menu_item_icon != blank
+                    assign mega_menu_item_icon = block.settings.menu_item_icon
+                endif
                 break
             endif
             endfor
@@ -19,6 +24,7 @@
         <div class="top-menu-item top-level {% if link.links != blank %} has-child js-expand-parent as-dropdown {% endif %} {% if mega_menu %} mega-menu-type {% endif %} {% if forloop.first %}mb-active{% endif %}">
                 <div class="link-title {% if link.links != blank or mega_menu %}js-expand-header{% endif %}">
                     <a href="{{ link.url }}" title="{{ link.title | escape }}" class="menu__link top-level-link" >
+                        {% if mega_menu_item_icon %} <img class="menu-item-icon" src="{{ mega_menu_item_icon |  image_url: width: 50 }}" width="50" height="auto" /> {% endif %}
                         <span class="top-level-title"> {{- link.title | escape -}}</span>
                         {% if link.links != blank %}
                             <svg version="1.1" class="child-arrow mb" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 66.91 122.88" style="enable-background:new 0 0 66.91 122.88" xml:space="preserve"><g><path d="M1.95,111.2c-2.65,2.72-2.59,7.08,0.14,9.73c2.72,2.65,7.08,2.59,9.73-0.14L64.94,66l-4.93-4.79l4.95,4.8 c2.65-2.74,2.59-7.11-0.15-9.76c-0.08-0.08-0.16-0.15-0.24-0.22L11.81,2.09c-2.65-2.73-7-2.79-9.73-0.14 C-0.64,4.6-0.7,8.95,1.95,11.68l48.46,49.55L1.95,111.2L1.95,111.2L1.95,111.2z" fill="#777777"></path></g></svg>

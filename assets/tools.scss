@@ -91,8 +91,6 @@ $size-small-desktop-max: 1520px; // 这个尺寸以下为小电脑，以上为�
     $rounded: vmbase($px, 1920);
     $maxpx: $px + px;
     @return min($rounded, $maxpx);
-    // @return min(vmbase($px, 1920), $px + 'px');
-    
 }
 
 // =====字体=====
