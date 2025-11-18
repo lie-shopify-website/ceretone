@@ -182,13 +182,127 @@
           "title": "Honors Received",
           "custom_class": ""
         }
+      },
+      "custom_our_service_XaYr4A": {
+        "type": "custom-our-service",
+        "blocks": {
+          "item_yNxAmj": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/service-01.png",
+              "title": "Affordable",
+              "info": "No more $4000 clinic visits"
+            }
+          },
+          "item_BGJkFb": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/service-02.png",
+              "title": "Accessible",
+              "info": "Setup in minutes, anywhere"
+            }
+          },
+          "item_MaHdJU": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/service-03.png",
+              "title": "Unnoticeable",
+              "info": "So discreet, only you will know."
+            }
+          },
+          "item_GVddJq": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/service-04.png",
+              "title": "Reliable",
+              "info": "Proven technology you can trust"
+            }
+          }
+        },
+        "block_order": [
+          "item_yNxAmj",
+          "item_BGJkFb",
+          "item_MaHdJU",
+          "item_GVddJq"
+        ],
+        "name": "Custom Our Service",
+        "settings": {
+          "title": "Because Hearing Shouldn’t Be Hard",
+          "custom_class": ""
+        }
+      },
+      "custom_best_seller_KxrWR6": {
+        "type": "custom-best-seller",
+        "blocks": {
+          "slide_RgN7dU": {
+            "type": "slide",
+            "settings": {
+              "hot_label": true,
+              "product": "core-one-pro-otc-hearing-aids",
+              "image": "shopify://shop_images/best-seller-01.png",
+              "short_desc": "Most comfort & invisible",
+              "short_desc_icon": "shopify://shop_images/icon-001.png",
+              "title": "Core One Pro",
+              "learn_more": "Learn more"
+            }
+          },
+          "slide_pdPCAk": {
+            "type": "slide",
+            "settings": {
+              "hot_label": false,
+              "product": "beacon-otc-hearing-aids",
+              "image": "shopify://shop_images/best-seller-02.png",
+              "short_desc": "Smart & Connected",
+              "short_desc_icon": "shopify://shop_images/icon-002.png",
+              "title": "Beacon",
+              "learn_more": "Learn more"
+            }
+          },
+          "slide_iJLzDt": {
+            "type": "slide",
+            "settings": {
+              "hot_label": false,
+              "product": "torch-otc-hearing-aids",
+              "image": "shopify://shop_images/best-seller-03.png",
+              "short_desc": "Power & Reliable",
+              "short_desc_icon": "shopify://shop_images/icon-003.png",
+              "title": "Torch",
+              "learn_more": "Learn more"
+            }
+          },
+          "slide_iJLzDt1": {
+            "type": "slide",
+            "settings": {
+              "hot_label": false,
+              "product": "torch-otc-hearing-aids",
+              "image": "shopify://shop_images/best-seller-03.png",
+              "short_desc": "Power & Reliable",
+              "short_desc_icon": "shopify://shop_images/icon-003.png",
+              "title": "Torch",
+              "learn_more": "Learn more"
+            }
+          }
+        },
+        "block_order": [
+          "slide_RgN7dU",
+          "slide_pdPCAk",
+          "slide_iJLzDt",
+          "slide_iJLzDt1"
+        ],
+        "name": "Custom Best Seller",
+        "settings": {
+          "title": "Meet Our Best Hearing Solutions",
+          "custom_class": ""
+        }
       }
     },
     "order": [
       "17344218541b2ca9bf",
       "custom_slideshow_UKnMwc",
       "custom_customer_review_naVffy",
-      "custom_honors_received_8dindE"
+      "custom_honors_received_8dindE",
+      "custom_our_service_XaYr4A",
+      "custom_best_seller_KxrWR6"
     ]
   }
   
