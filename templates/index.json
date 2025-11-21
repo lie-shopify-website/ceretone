@@ -425,6 +425,101 @@
           "title": "Over 1,000,000+ Happy Customers",
           "custom_class": ""
         }
+      },
+      "custom_collapsible_image_Da9JXt": {
+        "type": "custom-collapsible-image",
+        "blocks": {
+          "accordion_6Xb3tV": {
+            "type": "accordion",
+            "settings": {
+              "question": "Disappears Inside Your Ear Canal",
+              "answer": "Engineered to sit deep within your ear canal, Core One Pro is virtually undetectable to others. Focus on conversations, not on your hearing aid.",
+              "opened": false
+            }
+          },
+          "accordion_nbT7eH": {
+            "type": "accordion",
+            "settings": {
+              "question": "Custom Fit, Ultimate Comfort",
+              "answer": "Shaped to match your ear's oval contours and 30° canal curve, Core One Pro sits perfectly in place. The ergonomic design eliminates pressure points, delivering all-day comfort.",
+              "opened": false
+            }
+          },
+          "accordion_EiThGM": {
+            "type": "accordion",
+            "settings": {
+              "question": "So Light, You'll Barely Feel It.",
+              "answer": "Weighing just 0.035 oz (1 gram) with a secure fit, Core One Pro feels like wearing nothing at all.",
+              "opened": false
+            }
+          }
+        },
+        "block_order": [
+          "accordion_6Xb3tV",
+          "accordion_nbT7eH",
+          "accordion_EiThGM"
+        ],
+        "name": "Custom Collapsible Image",
+        "settings": {
+          "title": "How it works",
+          "big_image": "shopify://shop_images/image111.png"
+        }
+      },
+      "custom_faq_jaMpLP": {
+        "type": "custom-faq",
+        "blocks": {
+          "accordion_FRLXTX": {
+            "type": "accordion",
+            "settings": {
+              "question": "How Do l Know What Degree Of Hearing Loss l Have?",
+              "answer": "Age-related hearing loss is progressive, and your hearing slowly gets worse over time, so it's easyto overestimate your hearing abilities. Ceretone offers a free online hearing test, allowing you toquickly and accurately assess your current deqree of hearing loss.",
+              "opened": true
+            }
+          },
+          "accordion_kri9jp": {
+            "type": "accordion",
+            "settings": {
+              "question": "How Do l Know What Degree Of Hearing Loss l Have?",
+              "answer": "Age-related hearing loss is progressive, and your hearing slowly gets worse over time, so it's easyto overestimate your hearing abilities. Ceretone offers a free online hearing test, allowing you toquickly and accurately assess your current deqree of hearing loss.",
+              "opened": false
+            }
+          },
+          "accordion_ndx9np": {
+            "type": "accordion",
+            "settings": {
+              "question": "How Do l Know What Degree Of Hearing Loss l Have?",
+              "answer": "Age-related hearing loss is progressive, and your hearing slowly gets worse over time, so it's easyto overestimate your hearing abilities. Ceretone offers a free online hearing test, allowing you toquickly and accurately assess your current deqree of hearing loss.",
+              "opened": false
+            }
+          },
+          "accordion_nPcchw": {
+            "type": "accordion",
+            "settings": {
+              "question": "How Do l Know What Degree Of Hearing Loss l Have?",
+              "answer": "Age-related hearing loss is progressive, and your hearing slowly gets worse over time, so it's easyto overestimate your hearing abilities. Ceretone offers a free online hearing test, allowing you toquickly and accurately assess your current deqree of hearing loss.",
+              "opened": false
+            }
+          },
+          "accordion_wgdxPT": {
+            "type": "accordion",
+            "settings": {
+              "question": "How Do l Know What Degree Of Hearing Loss l Have?",
+              "answer": "Age-related hearing loss is progressive, and your hearing slowly gets worse over time, so it's easyto overestimate your hearing abilities. Ceretone offers a free online hearing test, allowing you toquickly and accurately assess your current deqree of hearing loss.",
+              "opened": false
+            }
+          }
+        },
+        "block_order": [
+          "accordion_FRLXTX",
+          "accordion_kri9jp",
+          "accordion_ndx9np",
+          "accordion_nPcchw",
+          "accordion_wgdxPT"
+        ],
+        "name": "Custom Faq",
+        "settings": {
+          "title": "Your Questions, Answered"
+        }
       }
     },
     "order": [
@@ -436,7 +531,9 @@
       "custom_best_seller_KxrWR6",
       "custom_key_features_GR6p8k",
       "custom_our_service_XaYr4A1",
-      "custom_customer_video_ignfhp"
+      "custom_customer_video_ignfhp",
+      "custom_collapsible_image_Da9JXt",
+      "custom_faq_jaMpLP"
     ]
   }
   
