@@ -131,7 +131,7 @@
       "settings": {
         "title": "Honors Received",
         "speed": 25,
-        "speed_mb": 10,
+        "speed_mb": 25,
         "custom_class": ""
       }
     },
