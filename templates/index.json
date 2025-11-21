@@ -96,6 +96,18 @@
     "custom_honors_received_8dindE": {
       "type": "custom-honors-received",
       "blocks": {
+        "slide_bAHaQA": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Red-Dot-Design-Award.png"
+          }
+        },
+        "slide_dHXGCL": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/ForbesHealth-Primary-Logo-with-pictogram-Black-Gold-RGB-300px_1_3x_3ee765e7-f2e3-437b-ac42-0469525b4978.png"
+          }
+        },
         "slide_LxBCc9": {
           "type": "slide",
           "settings": {
@@ -108,12 +120,6 @@
             "image": "shopify://shop_images/honors-received-3.png"
           }
         },
-        "slide_3fbA7Y": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/honors-received-4.png"
-          }
-        },
         "slide_pXJ34H1": {
           "type": "slide",
           "settings": {
@@ -122,9 +128,10 @@
         }
       },
       "block_order": [
+        "slide_bAHaQA",
+        "slide_dHXGCL",
         "slide_LxBCc9",
         "slide_Ek8AWw",
-        "slide_3fbA7Y",
         "slide_pXJ34H1"
       ],
       "name": "Custom Honors Received",
