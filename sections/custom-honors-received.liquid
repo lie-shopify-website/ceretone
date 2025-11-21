@@ -6,7 +6,9 @@
             { "type": "liquid", "id": "title", "label": "标题" },
     
             { "type": "header", "content": "配置" },
-            { "type": "text", "id": "custom_class", "label": "自定义class" },
+            { "type": "number", "id": "speed", "label": "播放速度", "default":25 },
+            { "type": "number", "id": "speed_mb", "label": "播放速度(手机端)", "default":10 },
+            { "type": "text", "id": "custom_class", "label": "自定义class" }
         ],
         "blocks": [
             {
@@ -30,54 +32,25 @@
     
     {{ 'custom-honors-received.css' | asset_url | stylesheet_tag }}
     
-    <div class="custom-honors-received" data-section-id="{{ section.id }}">
+    <div class="custom-honors-received" data-section-id="{{ section.id }}" style="--marquee-time:{{ section.settings.speed }}s;--marquee-time-mb:{{ section.settings.speed_mb }}s;">
         <div class="review-inner safe-container">
             {% if section.settings.title != blank %}
                 <div class="section-title"><h2>{{ section.settings.title }}</h2></div>
             {% endif %}
-            <div class="honors-received-swiper">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        {% for block in section.blocks %}
-                            <div class="swiper-slide">
-                                <div class="item">
-                                    {% if block.settings.image != blank %}
-                                        <div class="image">
-                                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lzsrc="{{ block.settings.image | image_url: width: 767 }}" class="js-lazy" width="auto" height="auto" />
-                                        </div>
-                                    {% endif %}
-                                </div>
-                            </div>
-                        {% endfor %}
-                    </div>
-                    <div class="swiper-scrollbar"></div>
+
+            <div class="marquee-container">
+                <div class="marquee-row marquee-left">
+                    {% for block in section.blocks %}
+                        {% if block.settings.image != blank %}
+                            <div class="marquee-item"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lzsrc="{{ block.settings.image | image_url: width: 767 }}" class="js-lazy" width="auto" height="auto" /></div>
+                        {% endif %}
+                    {% endfor %}
+                    {% for block in section.blocks %}
+                        {% if block.settings.image != blank %}
+                            <div class="marquee-item"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lzsrc="{{ block.settings.image | image_url: width: 767 }}" class="js-lazy" width="auto" height="auto" /></div>
+                        {% endif %}
+                    {% endfor %}
                 </div>
             </div>
         </div>
     </div>
-    <script>
-    ; (function () {
-        const oSection = document.querySelector('[data-section-id="{{ section.id }}"]');
-    
-        function initSwiper(){
-            const mainSwiperEle = oSection.querySelector('.swiper');
-            
-            if(mainSwiperEle) {
-                const mainSwiper = new Swiper(mainSwiperEle, {
-                    spaceBetween: 0,
-                    slidesPerView: 'auto',
-                    freeMode:true,
-                    scrollbar: {
-                        el: oSection.querySelector('.swiper-scrollbar'),
-                        dragSize:'120'
-                    },
-                });
-            }
-        }
-        
-        window.addEventListener('DOMContentLoaded', function() {
-            initSwiper();
-        });
-    
-    })();
-    </script>

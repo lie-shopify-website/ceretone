@@ -53,40 +53,56 @@
         }
     }
 
-    .honors-received-swiper {
-        margin-right: vm(-20);
-        @include media-min("spc") {
-            margin-right: 0;
-        }
+    
+    .marquee-container {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
 
-        .swiper-slide {
-            margin-right: vm(40);
-            width: auto;
+        .marquee-row {
+            display: flex;
+            gap:vm(40);
 
             @include media-min("spc") {
-                margin-right: vmpc(126);
+                gap:vmpc(126);
             }
 
-            &::last-child {
-                margin-right: 0;
-            }
-        }
-        .image {
-            img {
-                max-height: vm(35);
-                width: auto;
-    
-                @include media-min("spc") {
-                    max-height: vmpc(70);
+            .marquee-item {
+                flex-shrink: 0;
+
+                img {
                     width: auto;
+                    height: vm(35);
+
+                    @include media-min("spc") {
+                        height: vmpc(70);
+                    }
                 }
             }
         }
+        .marquee-left {
+            animation: marqueeLeft var(--marquee-time) linear infinite;
 
-        .swiper-scrollbar {
-            display: none;
+            @include media-min("spc") {
+                animation: marqueeLeft var(--marquee-time-mb) linear infinite;
+            }
         }
     }
+
+    .marquee-container:hover .marquee-row {
+        animation-play-state: paused;
+    }
+    
+    @keyframes marqueeLeft {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    
+    @keyframes marqueeRight {
+        0% { transform: translateX(-50%); }
+        100% { transform: translateX(0); }
+    }
+    
     
 
 }
