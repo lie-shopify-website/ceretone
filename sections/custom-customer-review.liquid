@@ -54,7 +54,7 @@
                                 {% if block.settings.image != blank %}
                                     <div class="image">
                                         <span class="short-line"></span>
-                                        <img src="{{ block.settings.image | image_url: width: 767 }}" width="auto" height="auto" />
+                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lzsrc="{{ block.settings.image | image_url: width: 767 }}" class="js-lazy" width="auto" height="auto" />
                                     </div>
                                 {% endif %}
                             </div>

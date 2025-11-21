@@ -294,6 +294,137 @@
           "title": "Meet Our Best Hearing Solutions",
           "custom_class": ""
         }
+      },
+      "custom_key_features_GR6p8k": {
+        "type": "custom-key-features",
+        "name": "Custom Key Features",
+        "settings": {
+          "bg": "shopify://shop_images/key-features-bg.jpg",
+          "bg_mb": "shopify://shop_images/key-features-bg-mb.jpg",
+          "title": "Hear More Clearly\nwith Industry-Leading\nAudio Technology",
+          "short_desc": "Your hearing quality comes down to two parts: the chip that processes the sound and the speaker that plays it.",
+          "video": "shopify://files/videos/8月13日(1).mp4",
+          "image": "shopify://shop_images/key-features-video.png",
+          "key_title1": "Intricon® Chipset",
+          "key_info1_1": "40+ Years of Hearing Innovation",
+          "key_info1_2": "Prescription-grade sound, now available over thecounter.",
+          "key_title2": "Knowles® Hi-Fi Speaker",
+          "key_info2_1": "70+ Years of Audio Innovation",
+          "key_info2_2": "Engineered for human voice clarity.",
+          "custom_class": ""
+        }
+      },
+      "custom_our_service_XaYr4A1": {
+        "type": "custom-our-service-v2",
+        "blocks": {
+          "item_yNxAmj": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/service-v2-01.png",
+              "title": "FDA-Registered,\nCrystal-Clear Sound",
+              "info": "Isolates voices from background noise so you hear what matters most."
+            }
+          },
+          "item_BGJkFb": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/service-v2-02.png",
+              "title": "Professional Quality,\nAccessible Price",
+              "info": "Proven technology refined over 40 years without the traditional $4,000+ clinic costs."
+            }
+          },
+          "item_MaHdJU": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/service-v2-03.png",
+              "title": "Easy Setup,\nReady To Use",
+              "info": "No clinic visits, no complicated setups - just open and start hearing better."
+            }
+          },
+          "item_GVddJq": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/service-v2-04.png",
+              "title": "60-Day Trial,\nLifelong Support",
+              "info": "Full money-back guarantee with free shipping both ways, plus 12-month warranty."
+            }
+          }
+        },
+        "block_order": [
+          "item_yNxAmj",
+          "item_BGJkFb",
+          "item_MaHdJU",
+          "item_GVddJq"
+        ],
+        "name": "Custom Our Service V2",
+        "settings": {
+          "title": "The Ceretone Advantage",
+          "custom_class": ""
+        }
+      },
+      "custom_customer_video_ignfhp": {
+        "type": "custom-customer-video",
+        "blocks": {
+          "video_TADRXV": {
+            "type": "video",
+            "settings": {
+              "video": "shopify://files/videos/8月13日(1).mp4",
+              "video_image": "shopify://shop_images/key-features-video.png",
+              "product": "core-one-otc-hearing-aids",
+              "image": "shopify://shop_images/video-image-1.png",
+              "title": "Core One Pro",
+              "customer_name": "James",
+              "verified_text": "Verified Customer"
+            }
+          },
+          "video_E3wJkG": {
+            "type": "video",
+            "settings": {
+              "video": "shopify://files/videos/7月21日.mp4",
+              "video_image": "shopify://shop_images/key-features-video.png",
+              "product": "core-one-otc-hearing-aids",
+              "image": "shopify://shop_images/video-image-1.png",
+              "title": "Core One",
+              "customer_name": "James",
+              "verified_text": "Verified Customer"
+            }
+          },
+          "video_tUgWBe": {
+            "type": "video",
+            "settings": {
+              "video": "shopify://files/videos/7月21日 (1).mp4",
+              "video_image": "shopify://shop_images/key-features-video.png",
+              "product": "core-one-otc-hearing-aids",
+              "image": "shopify://shop_images/video-image-1.png",
+              "title": "Core One Pro",
+              "customer_name": "James",
+              "verified_text": "Verified Customer"
+            }
+          },
+          "video_9fkaDT": {
+            "type": "video",
+            "settings": {
+              "video": "shopify://files/videos/7月21日 (1)(1).mp4",
+              "video_image": "shopify://shop_images/key-features-video.png",
+              "product": "core-one-otc-hearing-aids",
+              "image": "shopify://shop_images/video-image-1.png",
+              "title": "Core One",
+              "customer_name": "James",
+              "verified_text": "Verified Customer"
+            }
+          }
+        },
+        "block_order": [
+          "video_TADRXV",
+          "video_E3wJkG",
+          "video_tUgWBe",
+          "video_9fkaDT"
+        ],
+        "name": "Custom Customer Video",
+        "settings": {
+          "title": "Over 1,000,000+ Happy Customers",
+          "custom_class": ""
+        }
       }
     },
     "order": [
@@ -302,7 +433,10 @@
       "custom_customer_review_naVffy",
       "custom_honors_received_8dindE",
       "custom_our_service_XaYr4A",
-      "custom_best_seller_KxrWR6"
+      "custom_best_seller_KxrWR6",
+      "custom_key_features_GR6p8k",
+      "custom_our_service_XaYr4A1",
+      "custom_customer_video_ignfhp"
     ]
   }
   
