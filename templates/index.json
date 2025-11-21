@@ -96,16 +96,16 @@
     "custom_honors_received_8dindE": {
       "type": "custom-honors-received",
       "blocks": {
+        "slide_pXJ34H1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/French-Design-Logo_2_3x_fba92fbe-f66a-4f8b-a8e4-edfc2b9626d6.png"
+          }
+        },
         "slide_bAHaQA": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Red-Dot-Design-Award.png"
-          }
-        },
-        "slide_dHXGCL": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/ForbesHealth-Primary-Logo-with-pictogram-Black-Gold-RGB-300px_1_3x_3ee765e7-f2e3-437b-ac42-0469525b4978.png"
           }
         },
         "slide_LxBCc9": {
@@ -119,20 +119,13 @@
           "settings": {
             "image": "shopify://shop_images/honors-received-3.png"
           }
-        },
-        "slide_pXJ34H1": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/French-Design-Logo_2_3x_fba92fbe-f66a-4f8b-a8e4-edfc2b9626d6.png"
-          }
         }
       },
       "block_order": [
+        "slide_pXJ34H1",
         "slide_bAHaQA",
-        "slide_dHXGCL",
         "slide_LxBCc9",
-        "slide_Ek8AWw",
-        "slide_pXJ34H1"
+        "slide_Ek8AWw"
       ],
       "name": "Custom Honors Received",
       "settings": {
