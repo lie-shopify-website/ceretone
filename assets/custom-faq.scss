@@ -101,16 +101,16 @@
             }
 
             .collapsible-content__question {
-                font-size: vm(22);
-                line-height: vm(26);
-                font-weight: 700;
+                font-size: vm(20);
+                line-height: vm(24);
                 text-align: left;
                 margin: 0;
+                font-weight: 400;
                 
 
                 @include media-min("spc") {
-                    font-size: vmpc(32);
-                    line-height: vmpc(32);
+                    font-size: vmpc(26);
+                    line-height: vmpc(26);
                 }
             }
             .collapsible-content__icon {
