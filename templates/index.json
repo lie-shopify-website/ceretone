@@ -7,533 +7,471 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
-    "sections": {
-      "17344218541b2ca9bf": {
-        "type": "apps",
-        "blocks": {
-          "klaviyo_email_marketing_sms_form_embed_block_E8Tkj9": {
-            "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
-            "settings": {
-              "formId": "SjpLqw"
-            }
+{
+  "sections": {
+    "17344218541b2ca9bf": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_email_marketing_sms_form_embed_block_E8Tkj9": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "SjpLqw"
           }
-        },
-        "block_order": [
-          "klaviyo_email_marketing_sms_form_embed_block_E8Tkj9"
-        ],
-        "settings": {
-          "include_margins": true
         }
       },
-      "custom_slideshow_UKnMwc": {
-        "type": "custom-slideshow",
-        "blocks": {
-          "slide_Rq3yac": {
-            "type": "slide",
-            "settings": {
-              "image": "shopify://shop_images/slideshow-image0.jpg",
-              "image_mb": "shopify://shop_images/slideshow-image1.jpg",
-              "title": "Core One Pro<br class=\"mbbr\"> Finally Here",
-              "content": "The Most Compact & Powerful<br class=\"mbbr\"> Hearing Aid",
-              "button_label": "Shop Now",
-              "button_link": "shopify://collections"
-            }
-          },
-          "slide_LxcEyr": {
-            "type": "slide",
-            "settings": {
-              "image": "shopify://shop_images/slideshow-image0.jpg",
-              "image_mb": "shopify://shop_images/slideshow-image1.jpg",
-              "title": "Core One Pro<br class=\"mbbr\"> Finally Here",
-              "content": "The Most Compact & Powerful<br class=\"mbbr\"> Hearing Aid",
-              "button_label": "Shop Now",
-              "button_link": "shopify://collections"
-            }
-          },
-          "slide_UttMDW": {
-            "type": "slide",
-            "settings": {
-              "image": "shopify://shop_images/slideshow-image0.jpg",
-              "image_mb": "shopify://shop_images/slideshow-image1.jpg",
-              "title": "Core One Pro<br class=\"mbbr\"> Finally Here",
-              "content": "The Most Compact & Powerful<br class=\"mbbr\"> Hearing Aid",
-              "button_label": "Shop Now",
-              "button_link": "shopify://collections"
-            }
-          }
-        },
-        "block_order": [
-          "slide_Rq3yac",
-          "slide_LxcEyr",
-          "slide_UttMDW"
-        ],
-        "name": "Custom Slideshow",
-        "settings": {
-          "custom_class": "",
-          "auto_loop": true,
-          "auto_loop_speed": 5
-        }
-      },
-      "custom_customer_review_naVffy": {
-        "type": "custom-customer-review",
-        "blocks": {
-          "slide_7nNcxR": {
-            "type": "slide",
-            "settings": {
-              "image": "shopify://shop_images/WIRED.png",
-              "content": "Affordable. Very Small And Lightweight. Compact Case, \nFeaturing Volume-Level LEDs."
-            }
-          },
-          "slide_pRtNVT": {
-            "type": "slide",
-            "settings": {
-              "image": "shopify://shop_images/WIRED.png",
-              "content": "Affordable. Very Small And Lightweight. Compact Case, \nFeaturing Volume-Level LEDs."
-            }
-          },
-          "slide_p6gMPj": {
-            "type": "slide",
-            "settings": {
-              "image": "shopify://shop_images/WIRED.png",
-              "content": "Affordable. Very Small And Lightweight. Compact Case, \nFeaturing Volume-Level LEDs."
-            }
-          },
-          "slide_BtFBcp": {
-            "type": "slide",
-            "settings": {
-              "image": "shopify://shop_images/WIRED.png",
-              "content": "Affordable. Very Small And Lightweight. Compact Case, \nFeaturing Volume-Level LEDs."
-            }
-          },
-          "slide_FgHYPw": {
-            "type": "slide",
-            "settings": {
-              "image": "shopify://shop_images/WIRED.png",
-              "content": "Affordable. Very Small And Lightweight. Compact Case, \nFeaturing Volume-Level LEDs."
-            }
-          }
-        },
-        "block_order": [
-          "slide_7nNcxR",
-          "slide_pRtNVT",
-          "slide_p6gMPj",
-          "slide_BtFBcp",
-          "slide_FgHYPw"
-        ],
-        "name": "Custom Customer Review",
-        "settings": {
-          "title": "As Seen On",
-          "custom_class": "",
-          "auto_loop": false,
-          "auto_loop_speed": 5
-        }
-      },
-      "custom_honors_received_8dindE": {
-        "type": "custom-honors-received",
-        "blocks": {
-          "slide_rQHYEM": {
-            "type": "slide",
-            "settings": {
-              "image": "shopify://shop_images/honors-received-1.png"
-            }
-          },
-          "slide_LxBCc9": {
-            "type": "slide",
-            "settings": {
-              "image": "shopify://shop_images/honors-received-2.png"
-            }
-          },
-          "slide_Ek8AWw": {
-            "type": "slide",
-            "settings": {
-              "image": "shopify://shop_images/honors-received-3.png"
-            }
-          },
-          "slide_3fbA7Y": {
-            "type": "slide",
-            "settings": {
-              "image": "shopify://shop_images/honors-received-4.png"
-            }
-          },
-          "slide_pXJ34H": {
-            "type": "slide",
-            "settings": {
-              "image": "shopify://shop_images/honors-received-5.png"
-            }
-          },
-          "slide_pXJ34H1": {
-            "type": "slide",
-            "settings": {
-              "image": "shopify://shop_images/honors-received-5.png"
-            }
-          }
-        },
-        "block_order": [
-          "slide_rQHYEM",
-          "slide_LxBCc9",
-          "slide_Ek8AWw",
-          "slide_3fbA7Y",
-          "slide_pXJ34H",
-          "slide_pXJ34H1"
-        ],
-        "name": "Custom Honors Received",
-        "settings": {
-          "title": "Honors Received",
-          "custom_class": ""
-        }
-      },
-      "custom_our_service_XaYr4A": {
-        "type": "custom-our-service",
-        "blocks": {
-          "item_yNxAmj": {
-            "type": "item",
-            "settings": {
-              "image": "shopify://shop_images/service-01.png",
-              "title": "Affordable",
-              "info": "No more $4000 clinic visits"
-            }
-          },
-          "item_BGJkFb": {
-            "type": "item",
-            "settings": {
-              "image": "shopify://shop_images/service-02.png",
-              "title": "Accessible",
-              "info": "Setup in minutes, anywhere"
-            }
-          },
-          "item_MaHdJU": {
-            "type": "item",
-            "settings": {
-              "image": "shopify://shop_images/service-03.png",
-              "title": "Unnoticeable",
-              "info": "So discreet, only you will know."
-            }
-          },
-          "item_GVddJq": {
-            "type": "item",
-            "settings": {
-              "image": "shopify://shop_images/service-04.png",
-              "title": "Reliable",
-              "info": "Proven technology you can trust"
-            }
-          }
-        },
-        "block_order": [
-          "item_yNxAmj",
-          "item_BGJkFb",
-          "item_MaHdJU",
-          "item_GVddJq"
-        ],
-        "name": "Custom Our Service",
-        "settings": {
-          "title": "Because Hearing Shouldn’t Be Hard",
-          "custom_class": ""
-        }
-      },
-      "custom_best_seller_KxrWR6": {
-        "type": "custom-best-seller",
-        "blocks": {
-          "slide_RgN7dU": {
-            "type": "slide",
-            "settings": {
-              "hot_label": true,
-              "product": "core-one-pro-otc-hearing-aids",
-              "image": "shopify://shop_images/best-seller-01.png",
-              "short_desc": "Most comfort & invisible",
-              "short_desc_icon": "shopify://shop_images/icon-001.png",
-              "title": "Core One Pro",
-              "learn_more": "Learn more"
-            }
-          },
-          "slide_pdPCAk": {
-            "type": "slide",
-            "settings": {
-              "hot_label": false,
-              "product": "beacon-otc-hearing-aids",
-              "image": "shopify://shop_images/best-seller-02.png",
-              "short_desc": "Smart & Connected",
-              "short_desc_icon": "shopify://shop_images/icon-002.png",
-              "title": "Beacon",
-              "learn_more": "Learn more"
-            }
-          },
-          "slide_iJLzDt": {
-            "type": "slide",
-            "settings": {
-              "hot_label": false,
-              "product": "torch-otc-hearing-aids",
-              "image": "shopify://shop_images/best-seller-03.png",
-              "short_desc": "Power & Reliable",
-              "short_desc_icon": "shopify://shop_images/icon-003.png",
-              "title": "Torch",
-              "learn_more": "Learn more"
-            }
-          },
-          "slide_iJLzDt1": {
-            "type": "slide",
-            "settings": {
-              "hot_label": false,
-              "product": "torch-otc-hearing-aids",
-              "image": "shopify://shop_images/best-seller-03.png",
-              "short_desc": "Power & Reliable",
-              "short_desc_icon": "shopify://shop_images/icon-003.png",
-              "title": "Torch",
-              "learn_more": "Learn more"
-            }
-          }
-        },
-        "block_order": [
-          "slide_RgN7dU",
-          "slide_pdPCAk",
-          "slide_iJLzDt",
-          "slide_iJLzDt1"
-        ],
-        "name": "Custom Best Seller",
-        "settings": {
-          "title": "Meet Our Best Hearing Solutions",
-          "custom_class": ""
-        }
-      },
-      "custom_key_features_GR6p8k": {
-        "type": "custom-key-features",
-        "name": "Custom Key Features",
-        "settings": {
-          "bg": "shopify://shop_images/key-features-bg.jpg",
-          "bg_mb": "shopify://shop_images/key-features-bg-mb.jpg",
-          "title": "Hear More Clearly\nwith Industry-Leading\nAudio Technology",
-          "short_desc": "Your hearing quality comes down to two parts: the chip that processes the sound and the speaker that plays it.",
-          "video": "shopify://files/videos/8月13日(1).mp4",
-          "image": "shopify://shop_images/key-features-video.png",
-          "key_title1": "Intricon® Chipset",
-          "key_info1_1": "40+ Years of Hearing Innovation",
-          "key_info1_2": "Prescription-grade sound, now available over thecounter.",
-          "key_title2": "Knowles® Hi-Fi Speaker",
-          "key_info2_1": "70+ Years of Audio Innovation",
-          "key_info2_2": "Engineered for human voice clarity.",
-          "custom_class": ""
-        }
-      },
-      "custom_our_service_XaYr4A1": {
-        "type": "custom-our-service-v2",
-        "blocks": {
-          "item_yNxAmj": {
-            "type": "item",
-            "settings": {
-              "image": "shopify://shop_images/service-v2-01.png",
-              "title": "FDA-Registered,\nCrystal-Clear Sound",
-              "info": "Isolates voices from background noise so you hear what matters most."
-            }
-          },
-          "item_BGJkFb": {
-            "type": "item",
-            "settings": {
-              "image": "shopify://shop_images/service-v2-02.png",
-              "title": "Professional Quality,\nAccessible Price",
-              "info": "Proven technology refined over 40 years without the traditional $4,000+ clinic costs."
-            }
-          },
-          "item_MaHdJU": {
-            "type": "item",
-            "settings": {
-              "image": "shopify://shop_images/service-v2-03.png",
-              "title": "Easy Setup,\nReady To Use",
-              "info": "No clinic visits, no complicated setups - just open and start hearing better."
-            }
-          },
-          "item_GVddJq": {
-            "type": "item",
-            "settings": {
-              "image": "shopify://shop_images/service-v2-04.png",
-              "title": "60-Day Trial,\nLifelong Support",
-              "info": "Full money-back guarantee with free shipping both ways, plus 12-month warranty."
-            }
-          }
-        },
-        "block_order": [
-          "item_yNxAmj",
-          "item_BGJkFb",
-          "item_MaHdJU",
-          "item_GVddJq"
-        ],
-        "name": "Custom Our Service V2",
-        "settings": {
-          "title": "The Ceretone Advantage",
-          "custom_class": ""
-        }
-      },
-      "custom_customer_video_ignfhp": {
-        "type": "custom-customer-video",
-        "blocks": {
-          "video_TADRXV": {
-            "type": "video",
-            "settings": {
-              "video": "shopify://files/videos/8月13日(1).mp4",
-              "video_image": "shopify://shop_images/key-features-video.png",
-              "product": "core-one-otc-hearing-aids",
-              "image": "shopify://shop_images/video-image-1.png",
-              "title": "Core One Pro",
-              "customer_name": "James",
-              "verified_text": "Verified Customer"
-            }
-          },
-          "video_E3wJkG": {
-            "type": "video",
-            "settings": {
-              "video": "shopify://files/videos/7月21日.mp4",
-              "video_image": "shopify://shop_images/key-features-video.png",
-              "product": "core-one-otc-hearing-aids",
-              "image": "shopify://shop_images/video-image-1.png",
-              "title": "Core One",
-              "customer_name": "James",
-              "verified_text": "Verified Customer"
-            }
-          },
-          "video_tUgWBe": {
-            "type": "video",
-            "settings": {
-              "video": "shopify://files/videos/7月21日 (1).mp4",
-              "video_image": "shopify://shop_images/key-features-video.png",
-              "product": "core-one-otc-hearing-aids",
-              "image": "shopify://shop_images/video-image-1.png",
-              "title": "Core One Pro",
-              "customer_name": "James",
-              "verified_text": "Verified Customer"
-            }
-          },
-          "video_9fkaDT": {
-            "type": "video",
-            "settings": {
-              "video": "shopify://files/videos/7月21日 (1)(1).mp4",
-              "video_image": "shopify://shop_images/key-features-video.png",
-              "product": "core-one-otc-hearing-aids",
-              "image": "shopify://shop_images/video-image-1.png",
-              "title": "Core One",
-              "customer_name": "James",
-              "verified_text": "Verified Customer"
-            }
-          }
-        },
-        "block_order": [
-          "video_TADRXV",
-          "video_E3wJkG",
-          "video_tUgWBe",
-          "video_9fkaDT"
-        ],
-        "name": "Custom Customer Video",
-        "settings": {
-          "title": "Over 1,000,000+ Happy Customers",
-          "custom_class": ""
-        }
-      },
-      "custom_collapsible_image_Da9JXt": {
-        "type": "custom-collapsible-image",
-        "blocks": {
-          "accordion_6Xb3tV": {
-            "type": "accordion",
-            "settings": {
-              "question": "Disappears Inside Your Ear Canal",
-              "answer": "Engineered to sit deep within your ear canal, Core One Pro is virtually undetectable to others. Focus on conversations, not on your hearing aid.",
-              "opened": false
-            }
-          },
-          "accordion_nbT7eH": {
-            "type": "accordion",
-            "settings": {
-              "question": "Custom Fit, Ultimate Comfort",
-              "answer": "Shaped to match your ear's oval contours and 30° canal curve, Core One Pro sits perfectly in place. The ergonomic design eliminates pressure points, delivering all-day comfort.",
-              "opened": false
-            }
-          },
-          "accordion_EiThGM": {
-            "type": "accordion",
-            "settings": {
-              "question": "So Light, You'll Barely Feel It.",
-              "answer": "Weighing just 0.035 oz (1 gram) with a secure fit, Core One Pro feels like wearing nothing at all.",
-              "opened": false
-            }
-          }
-        },
-        "block_order": [
-          "accordion_6Xb3tV",
-          "accordion_nbT7eH",
-          "accordion_EiThGM"
-        ],
-        "name": "Custom Collapsible Image",
-        "settings": {
-          "title": "How it works",
-          "big_image": "shopify://shop_images/image111.png"
-        }
-      },
-      "custom_faq_jaMpLP": {
-        "type": "custom-faq",
-        "blocks": {
-          "accordion_FRLXTX": {
-            "type": "accordion",
-            "settings": {
-              "question": "How Do l Know What Degree Of Hearing Loss l Have?",
-              "answer": "Age-related hearing loss is progressive, and your hearing slowly gets worse over time, so it's easyto overestimate your hearing abilities. Ceretone offers a free online hearing test, allowing you toquickly and accurately assess your current deqree of hearing loss.",
-              "opened": true
-            }
-          },
-          "accordion_kri9jp": {
-            "type": "accordion",
-            "settings": {
-              "question": "How Do l Know What Degree Of Hearing Loss l Have?",
-              "answer": "Age-related hearing loss is progressive, and your hearing slowly gets worse over time, so it's easyto overestimate your hearing abilities. Ceretone offers a free online hearing test, allowing you toquickly and accurately assess your current deqree of hearing loss.",
-              "opened": false
-            }
-          },
-          "accordion_ndx9np": {
-            "type": "accordion",
-            "settings": {
-              "question": "How Do l Know What Degree Of Hearing Loss l Have?",
-              "answer": "Age-related hearing loss is progressive, and your hearing slowly gets worse over time, so it's easyto overestimate your hearing abilities. Ceretone offers a free online hearing test, allowing you toquickly and accurately assess your current deqree of hearing loss.",
-              "opened": false
-            }
-          },
-          "accordion_nPcchw": {
-            "type": "accordion",
-            "settings": {
-              "question": "How Do l Know What Degree Of Hearing Loss l Have?",
-              "answer": "Age-related hearing loss is progressive, and your hearing slowly gets worse over time, so it's easyto overestimate your hearing abilities. Ceretone offers a free online hearing test, allowing you toquickly and accurately assess your current deqree of hearing loss.",
-              "opened": false
-            }
-          },
-          "accordion_wgdxPT": {
-            "type": "accordion",
-            "settings": {
-              "question": "How Do l Know What Degree Of Hearing Loss l Have?",
-              "answer": "Age-related hearing loss is progressive, and your hearing slowly gets worse over time, so it's easyto overestimate your hearing abilities. Ceretone offers a free online hearing test, allowing you toquickly and accurately assess your current deqree of hearing loss.",
-              "opened": false
-            }
-          }
-        },
-        "block_order": [
-          "accordion_FRLXTX",
-          "accordion_kri9jp",
-          "accordion_ndx9np",
-          "accordion_nPcchw",
-          "accordion_wgdxPT"
-        ],
-        "name": "Custom Faq",
-        "settings": {
-          "title": "Your Questions, Answered"
-        }
+      "block_order": [
+        "klaviyo_email_marketing_sms_form_embed_block_E8Tkj9"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
-    "order": [
-      "17344218541b2ca9bf",
-      "custom_slideshow_UKnMwc",
-      "custom_customer_review_naVffy",
-      "custom_honors_received_8dindE",
-      "custom_our_service_XaYr4A",
-      "custom_best_seller_KxrWR6",
-      "custom_key_features_GR6p8k",
-      "custom_our_service_XaYr4A1",
-      "custom_customer_video_ignfhp",
-      "custom_collapsible_image_Da9JXt",
-      "custom_faq_jaMpLP"
-    ]
-  }
-  
+    "custom_slideshow_UKnMwc": {
+      "type": "custom-slideshow",
+      "blocks": {
+        "slide_Rq3yac": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/slideshow-image0.jpg",
+            "image_mb": "shopify://shop_images/slideshow-image1.jpg",
+            "title": "Core One Pro<br class=\"mbbr\"> Finally Here",
+            "content": "The Most Compact & Powerful<br class=\"mbbr\"> Hearing Aid",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections"
+          }
+        },
+        "slide_LxcEyr": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/slideshow-image0.jpg",
+            "image_mb": "shopify://shop_images/slideshow-image1.jpg",
+            "title": "Core One Pro<br class=\"mbbr\"> Finally Here",
+            "content": "The Most Compact & Powerful<br class=\"mbbr\"> Hearing Aid",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections"
+          }
+        }
+      },
+      "block_order": [
+        "slide_Rq3yac",
+        "slide_LxcEyr"
+      ],
+      "name": "Custom Slideshow",
+      "settings": {
+        "custom_class": "",
+        "auto_loop": true,
+        "auto_loop_speed": 5
+      }
+    },
+    "custom_customer_review_naVffy": {
+      "type": "custom-customer-review",
+      "blocks": {
+        "slide_7nNcxR": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/WIRED.png",
+            "content": "Affordable. Very Small And Lightweight. Compact Case, \nFeaturing Volume-Level LEDs."
+          }
+        },
+        "slide_pRtNVT": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/ForbesHealth-Primary-Logo-with-pictogram-Black-Gold-RGB-300px_1_3x_3ee765e7-f2e3-437b-ac42-0469525b4978.png",
+            "content": "Compact, powerful and barely noticeable."
+          }
+        }
+      },
+      "block_order": [
+        "slide_7nNcxR",
+        "slide_pRtNVT"
+      ],
+      "name": "Custom Customer Review",
+      "settings": {
+        "title": "As Seen On",
+        "custom_class": "",
+        "auto_loop": false,
+        "auto_loop_speed": 5
+      }
+    },
+    "custom_honors_received_8dindE": {
+      "type": "custom-honors-received",
+      "blocks": {
+        "slide_LxBCc9": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/honors-received-2.png"
+          }
+        },
+        "slide_Ek8AWw": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/honors-received-3.png"
+          }
+        },
+        "slide_3fbA7Y": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/honors-received-4.png"
+          }
+        },
+        "slide_pXJ34H1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/French-Design-Logo_2_3x_fba92fbe-f66a-4f8b-a8e4-edfc2b9626d6.png"
+          }
+        }
+      },
+      "block_order": [
+        "slide_LxBCc9",
+        "slide_Ek8AWw",
+        "slide_3fbA7Y",
+        "slide_pXJ34H1"
+      ],
+      "name": "Custom Honors Received",
+      "settings": {
+        "title": "Honors Received",
+        "speed": 25,
+        "speed_mb": 10,
+        "custom_class": ""
+      }
+    },
+    "custom_our_service_XaYr4A": {
+      "type": "custom-our-service",
+      "blocks": {
+        "item_yNxAmj": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/service-01.png",
+            "title": "Affordable",
+            "info": "No more $4000 clinic visits"
+          }
+        },
+        "item_BGJkFb": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/service-02.png",
+            "title": "Accessible",
+            "info": "Setup in minutes, anywhere"
+          }
+        },
+        "item_MaHdJU": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/service-03.png",
+            "title": "Unnoticeable",
+            "info": "So discreet, only you will know."
+          }
+        },
+        "item_GVddJq": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/service-04.png",
+            "title": "Reliable",
+            "info": "Proven technology you can trust"
+          }
+        }
+      },
+      "block_order": [
+        "item_yNxAmj",
+        "item_BGJkFb",
+        "item_MaHdJU",
+        "item_GVddJq"
+      ],
+      "name": "Custom Our Service",
+      "settings": {
+        "title": "Because Hearing Shouldn’t Be Hard",
+        "custom_class": ""
+      }
+    },
+    "custom_best_seller_KxrWR6": {
+      "type": "custom-best-seller",
+      "blocks": {
+        "slide_RgN7dU": {
+          "type": "slide",
+          "settings": {
+            "hot_label": true,
+            "product": "core-one-pro-otc-hearing-aids",
+            "image": "shopify://shop_images/best-seller-01.png",
+            "short_desc": "Most comfort & invisible",
+            "short_desc_icon": "shopify://shop_images/icon-001.png",
+            "title": "Core One Pro",
+            "learn_more": "Learn more"
+          }
+        },
+        "slide_pdPCAk": {
+          "type": "slide",
+          "settings": {
+            "hot_label": false,
+            "product": "beacon-otc-hearing-aids",
+            "image": "shopify://shop_images/best-seller-02.png",
+            "short_desc": "Smart & Connected",
+            "short_desc_icon": "shopify://shop_images/icon-002.png",
+            "title": "Beacon",
+            "learn_more": "Learn more"
+          }
+        },
+        "slide_iJLzDt": {
+          "type": "slide",
+          "settings": {
+            "hot_label": false,
+            "product": "torch-otc-hearing-aids",
+            "image": "shopify://shop_images/best-seller-03.png",
+            "short_desc": "Power & Reliable",
+            "short_desc_icon": "shopify://shop_images/icon-003.png",
+            "title": "Torch",
+            "learn_more": "Learn more"
+          }
+        }
+      },
+      "block_order": [
+        "slide_RgN7dU",
+        "slide_pdPCAk",
+        "slide_iJLzDt"
+      ],
+      "name": "Custom Best Seller",
+      "settings": {
+        "title": "Meet Our Best Hearing Solutions",
+        "custom_class": ""
+      }
+    },
+    "custom_key_features_GR6p8k": {
+      "type": "custom-key-features",
+      "name": "Custom Key Features",
+      "settings": {
+        "bg": "shopify://shop_images/key-features-bg.jpg",
+        "bg_mb": "shopify://shop_images/key-features-bg-mb.jpg",
+        "title": "Hear More Clearly\nwith Industry-Leading\nAudio Technology",
+        "short_desc": "Your hearing quality comes down to two parts: the chip that processes the sound and the speaker that plays it.",
+        "video": "shopify://files/videos/8月13日(1).mp4",
+        "image": "shopify://shop_images/key-features-video.png",
+        "key_title1": "Intricon® Chipset",
+        "key_info1_1": "40+ Years of Hearing Innovation",
+        "key_info1_2": "Prescription-grade sound, now available over thecounter.",
+        "key_title2": "Knowles® Hi-Fi Speaker",
+        "key_info2_1": "70+ Years of Audio Innovation",
+        "key_info2_2": "Engineered for human voice clarity.",
+        "custom_class": ""
+      }
+    },
+    "custom_our_service_XaYr4A1": {
+      "type": "custom-our-service-v2",
+      "blocks": {
+        "item_yNxAmj": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/service-v2-01.png",
+            "title": "FDA-Registered,\nCrystal-Clear Sound",
+            "info": "Isolates voices from background noise so you hear what matters most."
+          }
+        },
+        "item_BGJkFb": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/service-v2-02.png",
+            "title": "Professional Quality,\nAccessible Price",
+            "info": "Proven technology refined over 40 years without the traditional $4,000+ clinic costs."
+          }
+        },
+        "item_MaHdJU": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/service-v2-03.png",
+            "title": "Easy Setup,\nReady To Use",
+            "info": "No clinic visits, no complicated setups - just open and start hearing better."
+          }
+        },
+        "item_GVddJq": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/service-v2-04.png",
+            "title": "60-Day Trial,\nLifelong Support",
+            "info": "Full money-back guarantee with free shipping both ways, plus 12-month warranty."
+          }
+        }
+      },
+      "block_order": [
+        "item_yNxAmj",
+        "item_BGJkFb",
+        "item_MaHdJU",
+        "item_GVddJq"
+      ],
+      "name": "Custom Our Service V2",
+      "settings": {
+        "title": "The Ceretone Advantage",
+        "custom_class": ""
+      }
+    },
+    "custom_customer_video_ignfhp": {
+      "type": "custom-customer-video",
+      "blocks": {
+        "video_TADRXV": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/8月13日(1).mp4",
+            "video_image": "shopify://shop_images/key-features-video.png",
+            "product": "core-one-otc-hearing-aids",
+            "image": "shopify://shop_images/video-image-1.png",
+            "title": "Core One Pro",
+            "customer_name": "James",
+            "verified_text": "Verified Customer"
+          }
+        },
+        "video_E3wJkG": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/7月21日.mp4",
+            "video_image": "shopify://shop_images/key-features-video.png",
+            "product": "core-one-otc-hearing-aids",
+            "image": "shopify://shop_images/video-image-1.png",
+            "title": "Core One",
+            "customer_name": "James",
+            "verified_text": "Verified Customer"
+          }
+        },
+        "video_tUgWBe": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/7月21日 (1).mp4",
+            "video_image": "shopify://shop_images/key-features-video.png",
+            "product": "core-one-otc-hearing-aids",
+            "image": "shopify://shop_images/video-image-1.png",
+            "title": "Core One Pro",
+            "customer_name": "James",
+            "verified_text": "Verified Customer"
+          }
+        },
+        "video_9fkaDT": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/7月21日 (1)(1).mp4",
+            "video_image": "shopify://shop_images/key-features-video.png",
+            "product": "core-one-otc-hearing-aids",
+            "image": "shopify://shop_images/video-image-1.png",
+            "title": "Core One",
+            "customer_name": "James",
+            "verified_text": "Verified Customer"
+          }
+        }
+      },
+      "block_order": [
+        "video_TADRXV",
+        "video_E3wJkG",
+        "video_tUgWBe",
+        "video_9fkaDT"
+      ],
+      "name": "Custom Customer Video",
+      "settings": {
+        "title": "Over 1,000,000+ Happy Customers",
+        "custom_class": ""
+      }
+    },
+    "custom_collapsible_image_Da9JXt": {
+      "type": "custom-collapsible-image",
+      "blocks": {
+        "accordion_6Xb3tV": {
+          "type": "accordion",
+          "settings": {
+            "question": "Disappears Inside Your Ear Canal",
+            "answer": "Engineered to sit deep within your ear canal, Core One Pro is virtually undetectable to others. Focus on conversations, not on your hearing aid.",
+            "opened": false
+          }
+        },
+        "accordion_nbT7eH": {
+          "type": "accordion",
+          "settings": {
+            "question": "Custom Fit, Ultimate Comfort",
+            "answer": "Shaped to match your ear's oval contours and 30° canal curve, Core One Pro sits perfectly in place. The ergonomic design eliminates pressure points, delivering all-day comfort.",
+            "opened": false
+          }
+        },
+        "accordion_EiThGM": {
+          "type": "accordion",
+          "settings": {
+            "question": "So Light, You'll Barely Feel It.",
+            "answer": "Weighing just 0.035 oz (1 gram) with a secure fit, Core One Pro feels like wearing nothing at all.",
+            "opened": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_6Xb3tV",
+        "accordion_nbT7eH",
+        "accordion_EiThGM"
+      ],
+      "name": "Custom Collapsible Image",
+      "settings": {
+        "title": "How it works",
+        "big_image": "shopify://shop_images/image111.png"
+      }
+    },
+    "custom_faq_jaMpLP": {
+      "type": "custom-faq",
+      "blocks": {
+        "accordion_FRLXTX": {
+          "type": "accordion",
+          "settings": {
+            "question": "How Do l Know What Degree Of Hearing Loss l Have?",
+            "answer": "Age-related hearing loss is progressive, and your hearing slowly gets worse over time, so it's easyto overestimate your hearing abilities. Ceretone offers a free online hearing test, allowing you toquickly and accurately assess your current deqree of hearing loss.",
+            "opened": true
+          }
+        },
+        "accordion_kri9jp": {
+          "type": "accordion",
+          "settings": {
+            "question": "How Do l Know What Degree Of Hearing Loss l Have?",
+            "answer": "Age-related hearing loss is progressive, and your hearing slowly gets worse over time, so it's easyto overestimate your hearing abilities. Ceretone offers a free online hearing test, allowing you toquickly and accurately assess your current deqree of hearing loss.",
+            "opened": false
+          }
+        },
+        "accordion_ndx9np": {
+          "type": "accordion",
+          "settings": {
+            "question": "How Do l Know What Degree Of Hearing Loss l Have?",
+            "answer": "Age-related hearing loss is progressive, and your hearing slowly gets worse over time, so it's easyto overestimate your hearing abilities. Ceretone offers a free online hearing test, allowing you toquickly and accurately assess your current deqree of hearing loss.",
+            "opened": false
+          }
+        },
+        "accordion_nPcchw": {
+          "type": "accordion",
+          "settings": {
+            "question": "How Do l Know What Degree Of Hearing Loss l Have?",
+            "answer": "Age-related hearing loss is progressive, and your hearing slowly gets worse over time, so it's easyto overestimate your hearing abilities. Ceretone offers a free online hearing test, allowing you toquickly and accurately assess your current deqree of hearing loss.",
+            "opened": false
+          }
+        },
+        "accordion_wgdxPT": {
+          "type": "accordion",
+          "settings": {
+            "question": "How Do l Know What Degree Of Hearing Loss l Have?",
+            "answer": "Age-related hearing loss is progressive, and your hearing slowly gets worse over time, so it's easyto overestimate your hearing abilities. Ceretone offers a free online hearing test, allowing you toquickly and accurately assess your current deqree of hearing loss.",
+            "opened": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_FRLXTX",
+        "accordion_kri9jp",
+        "accordion_ndx9np",
+        "accordion_nPcchw",
+        "accordion_wgdxPT"
+      ],
+      "name": "Custom Faq",
+      "settings": {
+        "title": "Your Questions, Answered"
+      }
+    }
+  },
+  "order": [
+    "17344218541b2ca9bf",
+    "custom_slideshow_UKnMwc",
+    "custom_customer_review_naVffy",
+    "custom_honors_received_8dindE",
+    "custom_our_service_XaYr4A",
+    "custom_best_seller_KxrWR6",
+    "custom_key_features_GR6p8k",
+    "custom_our_service_XaYr4A1",
+    "custom_customer_video_ignfhp",
+    "custom_collapsible_image_Da9JXt",
+    "custom_faq_jaMpLP"
+  ]
+}
