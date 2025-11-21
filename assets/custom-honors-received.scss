@@ -81,10 +81,10 @@
             }
         }
         .marquee-left {
-            animation: marqueeLeft var(--marquee-time) linear infinite;
+            animation: marqueeLeft var(--marquee-time-mb) linear infinite;
 
             @include media-min("spc") {
-                animation: marqueeLeft var(--marquee-time-mb) linear infinite;
+                animation: marqueeLeft var(--marquee-time) linear infinite;
             }
         }
     }
